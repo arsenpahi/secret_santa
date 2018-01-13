@@ -1,0 +1,48 @@
+[debug] [2018-01-08T01:22:06.029Z] ----------------------------------------------------------------------
+[debug] [2018-01-08T01:22:06.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natalie\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-08T01:22:06.037Z] CLI Version:   3.16.0
+[debug] [2018-01-08T01:22:06.037Z] Platform:      win32
+[debug] [2018-01-08T01:22:06.037Z] Node Version:  v8.9.4
+[debug] [2018-01-08T01:22:06.041Z] Time:          Mon Jan 08 2018 03:22:06 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:06.041Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-08T01:22:06.072Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-08T01:22:06.072Z] > authorizing via signed-in user
+[debug] [2018-01-08T01:22:06.072Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-08T01:22:06.072Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Xs_tbwGz1sHp77sFMcIUHpHVTuH7EKrg-xYCa7aIZM4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jan 08 2018 03:22:06 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:06.440Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-08T01:22:06.471Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/secret-santa-vue-js  
+  
+ Mon Jan 08 2018 03:22:06 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:07.551Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-08T01:22:07.551Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/secret-santa-vue-js/tokens  
+  
+ Mon Jan 08 2018 03:22:07 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:08.320Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\OpenServer\domains\secret_santa_js'...
+[info] 
+[debug] [2018-01-08T01:22:08.336Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/secret-santa-vue-js  
+  
+ Mon Jan 08 2018 03:22:08 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:09.286Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-08T01:22:09.291Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1074563660560/clients/_:getWebAppConfig  
+  
+ Mon Jan 08 2018 03:22:09 GMT+0200 (RTZ 1 (зима))
+[debug] [2018-01-08T01:22:09.852Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-08T01:22:10.178Z] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (C:\Users\Natalie\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\hosting.js:34:18)
+    at Object.onceWrapper (events.js:313:30)
+    at emitNone (events.js:106:13)
+    at Server.emit (events.js:208:7)
+    at emitListeningNT (net.js:1378:10)
+    at _combinedTickCallback (internal/process/next_tick.js:135:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[error] 
+[error] Error: An unexpected error has occurred.
