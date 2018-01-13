@@ -9,14 +9,14 @@
            :start-index="1"
            direction="vertical">
 
-                   <v-tab v-for="event in getEvents" :title="event.name" icon="ti-user">
+                   <v-tab v-for="event in getEvents" :title="event.name" :key="event.name">
 
                      <div class="event_wrap">
                        <h1> {{event.name}}</h1>
                        <p>{{event.email_admin}}</p>
-                       <div v-for="item in anArray">
+                       <!-- <div v-for="item in anArray">
                          <p>{{ item}}</p>
-                       </div><br><br><br><br><br>
+                       </div><br><br><br><br><br> -->
                          <li v-for="n in getItem">{{ n }}</li>
                      <!-- <div v-for="(value, key, index) in anObject">
                        {{ index }}------ {{ key }}  : {{ value }}<br>
