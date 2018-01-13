@@ -1,0 +1,41 @@
+[debug] [2018-01-13T17:22:57.184Z] ----------------------------------------------------------------------
+[debug] [2018-01-13T17:22:57.184Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arsen\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-13T17:22:57.200Z] CLI Version:   3.16.0
+[debug] [2018-01-13T17:22:57.200Z] Platform:      win32
+[debug] [2018-01-13T17:22:57.200Z] Node Version:  v9.4.0
+[debug] [2018-01-13T17:22:57.200Z] Time:          Sat Jan 13 2018 20:22:57 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:22:57.200Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-13T17:22:57.216Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-13T17:22:57.216Z] > authorizing via signed-in user
+[debug] [2018-01-13T17:22:57.216Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-13T17:22:57.216Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/xbZvSLgFIxeMFVbehuvwXv3lGp8chkxctfps91kWTho',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Jan 13 2018 20:22:57 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:22:57.575Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-13T17:22:57.575Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/test-b2ab6  
+  
+ Sat Jan 13 2018 20:22:57 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:22:58.481Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-13T17:22:58.497Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/test-b2ab6/tokens  
+  
+ Sat Jan 13 2018 20:22:58 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:22:59.153Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'c:\Disk\secret_santa_js'...
+[info] 
+[debug] [2018-01-13T17:22:59.153Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/test-b2ab6  
+  
+ Sat Jan 13 2018 20:22:59 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:23:00.087Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-13T17:23:00.087Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/680973811456/clients/_:getWebAppConfig  
+  
+ Sat Jan 13 2018 20:23:00 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-01-13T17:23:00.681Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
