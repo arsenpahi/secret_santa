@@ -703,7 +703,6 @@ justify-content: flex-end;
 }
 
 .event_wrap {
-  padding: 0 1%;
   padding-top: 3%;
       width: 100%;
 }
@@ -842,14 +841,239 @@ padding-top: 0;
   min-height: 100vh;
 }
 .left-vertical-tabs {
-  padding: 3% 1%;
+  width: 25%;
+display: flex;
+justify-content: center;
   background: rgba(255, 255, 255, 0.25);
-  transition: all 2s cubic-bezier(1, -0.07, 0, 1.37);
+  transition: all 2s cubic-bezier(0.4, 0, 1, 1);
+}
+.right-text-tabs {
+  width: 100%;
 }
 .vue-tabs .nav > li {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+      margin: 3% auto;
 }
 
+/* .wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.filter-price {
+  width: 220px;
+  border: 0;
+  padding: 0;
+  margin-left: auto;
+margin-right: auto;
+}
+
+
+.price-field {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 15px 0;
+}
+
+.price-field input[type=range] {
+    position: absolute;
+}
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+  width: 99%;
+  height: 2px;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  pointer-events: none;
+  -webkit-appearance: none;
+  left: 0;
+  right: 0;
+}
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.price-field input[type=range]:active,
+.price-field input[type=range]:focus {
+  outline: 0;
+}
+
+.price-field input[type=range]::-ms-track {
+  width: 188px;
+  height: 5px;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  pointer-events: none;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  border-radius: 5px;
+}
+
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb {
+  /* WebKit/Blink */
+    position: relative;
+    -webkit-appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-top: -6px;
+    background-color: #00bcd4;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+background: #00BCD4;
+border-radius: 50%;
+box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.7215686274509804);
+
+    /* box-shadow: 0 0 3px 5px #fff; */
+}
+/* .price-field::after {
+  content: '';
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border: 1px solid #00bcd4;
+} */
+
+.price-field input[type=range]::-moz-range-thumb {
+  /* Firefox */
+  position: relative;
+  appearance: none;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -7px;
+  background-color: #00bcd4;
+  cursor: pointer;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+}
+
+.price-field input[type=range]::-ms-thumb  {
+  /* IE */
+  position: relative;
+  appearance: none;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -7px;
+  background-color: #00bcd4;
+  cursor: pointer;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+}
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track {
+  /* WebKit/Blink */
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #00bcd4;
+  border-radius: 5px;
+}
+
+.price-field input[type=range]::-moz-range-track {
+  /* Firefox */
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #00bcd4;
+  border-radius: 5px;
+}
+
+.price-field input[type=range]::-ms-track {
+  /* IE */
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #00bcd4;
+  border-radius: 5px;
+}
+
+/* Style for input value block */
+
+.price-wrap {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 7px;
+  color: #7771aa;
+font-weight: 600;
+font-size: 20px;
+}
+
+.price-wrap-1,
+.price-wrap-2 {
+  display: flex;
+}
+
+.price-wrap_line {
+  margin: 0 10px;
+}
+
+
+
+.price-wrap label {
+  text-align: right;
+}
+
+/* Style for active state input */
+
+.price-field input[type=range]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.5px #fff;
+  transition-duration: 0.3s;
+}
+
+.price-field input[type=range]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.5px #fff;
+  transition-duration: 0.3s;
+}
+.options-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.options-wrapper .option-wrapper {
+  margin: 1% 4%;
+padding: 10px;
+background: rgba(255, 255, 255, 0.71);
+border-radius: 10px;
+}
+.option-name {
+  color: #0cb2c7;
+}
 /****************-- END EVENTS --****************/

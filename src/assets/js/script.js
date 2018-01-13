@@ -11,14 +11,13 @@ $(document).ready(function() {
           marginLeft = 25;
         }
         $('#box').css({'margin-left': marginLeft+'%', 'z-index': -1});
-      }
-      if(componentName == 'dashboard' && $('.dashboard-wrap').attr('data-user')) {
+      } else if(componentName == 'dashboard' || componentName == 'events' && $('.dashboard-wrap').attr('data-user')) {
         console.log($('.dashboard-wrap').attr('data-user'));
         $('#box').hide();
         $('.buttons_holder').hide();
-
-      } else {
-         window.location.href = href.replace(componentName, '');
+          if(!($('.dashboard-wrap').attr('data-user'))) {
+             window.location.href = href.replace(componentName, '');
+          }
       }
 
 
@@ -38,5 +37,5 @@ $('.auth_wrap .input__field').focusin(function(){
       $(this).siblings().css({'transform': 'translate3d(0, 0, 0)', 'opacity': 1});
     }
   });
-  $('h1').insertBefore($('.left-vertical-tabs'));
+
 });
