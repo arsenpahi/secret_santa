@@ -4,13 +4,13 @@
 
           <div class="events_list">
             <h1>List of my events</h1>
-              <div v-if='eventsArray.length == 0' class="no_events">
+              <div v-if='getEvents.length == 0' class="no_events">
                 Now You don't have any events.<br>
                 Create one!
               </div>
               <div class="events_holder">
                 <ul>
-                  <li v-for="event in eventsArray"><router-link to="/events"> {{event.name}}</router-link></li>
+                  <li v-for="event in getEvents"><router-link to="/events"> {{event.name}}</router-link></li>
                 </ul>
                 <div class="submit-msg error">
                   Name is empty. Try again!
@@ -92,8 +92,17 @@
                 return item.email
               }
             })
-          }
+          },
+		  getEvents: function() {
+             let userEmail = this.userEmail
+             return this.eventsArray.filter(function (item) {
+               if(item.email_admin == userEmail) {
+                 return item.email_admin
+               }
+             })
+           }
         },
+		
         methods: {
           logOut() {
             firebase.auth().signOut();

@@ -9,7 +9,7 @@
            :start-index="1"
            direction="vertical">
 
-                   <v-tab v-for="event in eventsArray" :title="event.name" icon="ti-user">
+                   <v-tab v-for="event in getEvents" :title="event.name" icon="ti-user">
 
                      <div class="event_wrap">
                        <h1> {{event.name}}</h1>
@@ -83,7 +83,15 @@ import 'vue-nav-tabs/themes/vue-tabs.css'
                 return item.email
               }
             })
-          }
+          },
+		  getEvents: function() {
+             let userEmail = this.userEmail
+             return this.eventsArray.filter(function (item) {
+               if(item.email_admin == userEmail) {
+                 return item.email_admin
+               }
+             })
+           }
         },
         components: {
           VueTabs,

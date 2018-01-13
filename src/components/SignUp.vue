@@ -31,14 +31,7 @@
 					</label>
 				</span>
         <button v-on:click="signUp" >Sign Up</button>
-        <ul>
-          {{anArray}}
-    <li v-for="item in anArray">
-
-      <p>{{ item.name }}</p>
-      <p>{{ item.surname }}</p>
-    </li>
-  </ul>
+       
         <!-- <p>back to <router-link to="/login">login</router-link></p> -->
     </div>
 </template>
