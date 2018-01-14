@@ -11,7 +11,7 @@ $(document).ready(function() {
           marginLeft = 25;
         }
         $('#box').css({'margin-left': marginLeft+'%', 'z-index': -1});
-      } else if(componentName == 'dashboard' || componentName == 'events' && $('.dashboard-wrap').attr('data-user')) {
+      } else if(componentName == 'dashboard' || hrefArray[hrefArray.length-2] == 'events' && $('.dashboard-wrap').attr('data-user')) {
         console.log($('.dashboard-wrap').attr('data-user'));
         $('#box').hide();
         $('.buttons_holder').hide();

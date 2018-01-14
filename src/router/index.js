@@ -37,13 +37,16 @@ let router = new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard,
-      mode: 'history'
+      mode: 'history',
     },
     {
       path: '/events',
       name: 'EventsInfo',
       component: EventsInfo,
-      mode: 'history'
+mode: 'history',
+      children: [
+        { path: ':id', component: EventsInfo, name: 'EventsInfo' }
+      ]
     }
   ]
 })

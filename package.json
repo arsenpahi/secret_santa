@@ -12,7 +12,10 @@
   "dependencies": {
     "firebase": "^4.8.1",
     "jquery": "^3.2.1",
+    "moment": "^2.20.1",
     "vue": "^2.5.13",
+    "vue-date": "^1.1.7",
+    "vue-datetime-2": "^0.6.1",
     "vue-nav-tabs": "^0.5.6",
     "vue-router": "^3.0.1",
     "vuefire": "^1.4.5",

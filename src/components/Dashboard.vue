@@ -10,7 +10,9 @@
               </div>
               <div class="events_holder">
                 <ul>
-                  <li v-for="event in getEvents"><router-link to="/events"> {{event.name}}</router-link></li>
+
+                    <li v-for="event in getEvents"><router-link :to="{name: 'EventsInfo', params: {id: event['.key']}}" active-class="active"> {{event.name}}</router-link></li>
+                  <!-- <li v-for="event in getEvents"><router-link :to="'/events/'+event['.key']"> {{event.name}}</router-link></li> -->
                 </ul>
                 <div class="submit-msg error">
                   Name is empty. Try again!
@@ -27,10 +29,10 @@
         <div class="user-info_wrap ">
           <div class="header">
             <div v-for="user_name in getItem" class="user_name">{{ user_name.name }}</div>
-            <div class="user_photo">
+            <div class="user_photo icon-wrap">
               <img src="../assets/img/santa-claus.png" alt="">
             </div>
-            <div @click="logOut" class="user_logout">
+            <div @click="logOut" class="user_logout icon-wrap">
               <img src="../assets/img/logout.png" alt="">
             </div>
           </div>
@@ -53,7 +55,6 @@
     const eventsRef = db.ref('events')
 
     var userEmail = localStorage.user;
-  ///  console.log(localStorage.user)
     export default {
         name: 'dashboard',
         data: function() {
@@ -102,7 +103,7 @@
              })
            }
         },
-		
+
         methods: {
           logOut() {
             firebase.auth().signOut();
@@ -111,10 +112,6 @@
             $('#box').css({'display': 'block', 'margin-left': 0, 'z-index': 0, 'animation': 'translateAnimationYTop 1s', 'animation-fill-mode': 'both'});
             $('.buttons_holder').css({'display': 'block'});
           },
-          loadMore() {
-                this.$bindAsArray('users', db.ref(`users`).orderByChild('name').limitToLast(10));
-                //console.log(db.ref('users/email'));
-              },
           createEvent: function() {
             if($('#create-button a').text() == 'Add to List') {
               if($('.new_event input').css('display') != 'none' && $('.new_event input').val() != '') {
@@ -125,7 +122,14 @@
                     nameEvent = $('.new_event input').val();
                 eventsRef.push({
                     name: nameEvent,
-                    email_admin: userEmail
+                    email_admin: userEmail,
+                    description: '',
+                    place: '',
+                    address: '',
+                    date: '2018-01-14',
+                    time: '00:00',
+                    priceFrom: 0,
+                    priceTo: 300,
                 });
                 $('.new_event input').val('');
                 if($('.events_holder .submit-msg.error').css('display') != 'none') {
@@ -135,7 +139,6 @@
                   $('.events_holder .submit-msg.error').show();
               }
             } else {
-                console.log('Create');
                 $('#create-button a').html('Add to List');
                 $('.new_event').show();
                 $('.new_event input').on('keypress', function() {
