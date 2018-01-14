@@ -21,7 +21,7 @@
 						<span class="input__label-content">Password *</span>
 					</label>
 				</span>
-        <button v-on:click="signIn" >Sigfn In</button>
+        <button v-on:click="signIn" >Sign In</button>
     </div>
 </template>
 <script>
