@@ -3,9 +3,8 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "app",
+    "public": "public",
     "ignore": [
-      "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
